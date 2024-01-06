@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  margin-bottom: 30rem;
 }
 
 .container {
@@ -76,6 +77,7 @@
   width: 100%;
   text-align: left;
   padding: 0 3rem;
+  min-height: 30rem;
 }
 
 /* Pseudo-element for bottom border */
