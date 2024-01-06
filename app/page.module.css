@@ -79,15 +79,16 @@
 }
 
 .blogPostTitle {
-  font-weight: 900;
+  font-weight: 400;
 }
 .blogPostViews {
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .blogPostTime {
   float: right;
   text-align: right;
+  font-weight: 300;
 }
 
 .section {
@@ -126,6 +127,11 @@
   .title {
     font-size: 23pt;
     width: 100%;
+  }
+  .blogPostTime {
+    float: left;
+    width: 100%;
+    text-align: left;
   }
 }
 
