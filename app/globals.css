@@ -1,6 +1,8 @@
 :root {
-  --container-foreground: black;
-  --container-background: white;
+  --container-foreground: #e2c6a6;
+  --container-background: #917563;
+  --text-color: black;
+  --text-color-secondary: white;
 }
 
 @media (prefers-color-scheme: dark) {
