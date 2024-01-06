@@ -2,19 +2,14 @@
 import styles from '@/app/page.module.css';
 import { useState } from 'react';
 import blogData from "@/data/blog.json";
+import increment_post from './IncrementPost';
 
 export default function BlogPage() {
     const [postId, setPostId] = useState(null);
 
     async function openPost(_postId) {
         try {
-            fetch('/api/increment_views', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ postId: _postId }),
-            });
+            increment_post(_postId);
             setPostId(_postId);
         } catch (error) {
             console.error("Error sending data:", error);
