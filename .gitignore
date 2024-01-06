@@ -12,7 +12,7 @@
 # next.js
 /.next/
 /out/
-
+/data/blog.json
 # production
 /build
 
