@@ -13,8 +13,9 @@ export default function NavBar() {
     };
 
     return (<div className={styles.navbar}>
-        <div className={styles.navbarButton} onClick={scrollToElement}>Home</div>
+        <div className={styles.navbarButton} onClick={scrollToElement}>Projects</div>
+        <div className={styles.navbarButton} onClick={scrollToElement}>Work</div>
+        <div className={styles.navbarButton} onClick={scrollToElement}>Education</div>
         <div className={styles.navbarButton} onClick={scrollToElement}>Resume</div>
-        <div className={styles.navbarButton} onClick={scrollToElement}>Portfolio</div>
     </div>);
 }
