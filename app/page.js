@@ -10,9 +10,8 @@ export default function Home() {
           hey, im koray ✌️
         </div>
 
-        <div className={styles.section} id='Projects'>Projects</div>
-        <div className={styles.section} id='Work'>Work</div>
-        <div className={styles.section} id='Education'>Education</div>
+        <div className={styles.section} id='About'>About</div>
+        <div className={styles.section} id='Blog'>Blog</div>
         <div className={styles.section} id='Resume'>Resume</div>
       </div>
     </main>
