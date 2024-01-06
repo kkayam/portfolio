@@ -8,19 +8,20 @@ import WorkPage from '@/components/WorkPage';
 
 export default function Home() {
   const [page, setPage] = useState(0);
+  const [reset, setReset] = useState(0);
 
   function getPage(page) {
     switch (page) {
-      case 0: return <HomePage />;
-      case 1: return <BlogPage />;
-      case 2: return <WorkPage />;
+      case 0: return <HomePage key={reset} />;
+      case 1: return <BlogPage key={reset} />;
+      case 2: return <WorkPage key={reset} />;
     }
   }
 
   return (
     <main className={styles.main}>
       <div className={styles.container} id='Home'>
-        <NavBar setPage={setPage} />
+        <NavBar setPage={setPage} reset={() => { setReset(Date.now()); }} />
         {getPage(page)}
       </div>
     </main>
