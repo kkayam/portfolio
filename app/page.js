@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.container}>
+      <div className={styles.container} id='Home'>
         <NavBar />
         <div className={styles.title}>
           hey, im koray ✌️
