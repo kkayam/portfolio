@@ -37,6 +37,7 @@
   font-size: 13pt;
   position: relative; /* Add this line */
   transition: 0.3s ease; /* Smooth transition for background color */
+  user-select: none;
   cursor: pointer;
 }
 
@@ -64,18 +65,16 @@
 .title {
   font-size: 30pt;
   width: 100%;
+  font-weight: 300;
   padding: 0rem 3rem;
   margin: 2rem 0 4rem 0;
 }
+
 .blogPostThumb {
   width: 100%;
+  user-select: none;
   padding: 1rem 3rem;
   transition: 0.3s ease; /* Smooth transition for background color */
-}
-
-.blogPostThumb:hover {
-  background-color: var(--container-background);
-  cursor: pointer;
 }
 
 .blogPostTitle {
@@ -97,6 +96,12 @@
   width: 100%;
   text-align: left;
   padding: 3rem;
+}
+
+.sectionTitle {
+  font-weight: 400;
+  font-size: 13pt;
+  padding: 0 0 7px 0;
 }
 
 /* Pseudo-element for bottom border */
@@ -140,5 +145,9 @@
   .navbarButton:hover {
     background: var(--container-background);
     color: var(--text-color-secondary);
+  }
+  .blogPostThumb:hover {
+    background-color: var(--container-background);
+    cursor: pointer;
   }
 }

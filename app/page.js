@@ -24,6 +24,7 @@ export default function Home() {
         <NavBar setPage={setPage} reset={() => { setReset(Date.now()); }} />
         {getPage(page)}
       </div>
+      <footer className={styles.footer}></footer>
     </main>
   );
 }

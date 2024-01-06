@@ -1,18 +1,35 @@
-'use client';
+
 import styles from '@/app/page.module.css';
 import { useState } from 'react';
-
-var post_titles = ["Worms are cool, and heres why", "Japanese head massage", "Volcano eruption, and how this affects us", "Develop a game - NOW"];
-var lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris orci, scelerisque nec velit id, facilisis gravida nibh. Vivamus vel ante tincidunt, laoreet ante vel, malesuada arcu. Sed tempus purus porttitor enim placerat, eu congue augue varius. Phasellus fermentum consectetur augue. Aliquam et sem nec augue eleifend iaculis. Fusce pharetra neque vitae metus tempor placerat. Maecenas accumsan fermentum nulla ut egestas. Morbi a scelerisque dui. Sed rutrum feugiat nulla eu mollis. Nullam vel facilisis tellus, et imperdiet libero. Proin et cursus leo. Aenean eleifend porttitor varius. Aliquam eleifend, mauris at iaculis vulputate, est lectus mollis lectus, vitae fringilla diam erat at dolor. In hac habitasse platea dictumst. Suspendisse hendrerit sodales risus eu ullamcorper. Aenean vehicula a orci non lacinia.";
+import blogData from "@/data/blog.json";
 
 export default function BlogPage() {
     const [postId, setPostId] = useState(null);
+
+    async function openPost(_postId) {
+        try {
+            fetch('/api/increment_views', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ postId: _postId }),
+            });
+            setPostId(_postId);
+        } catch (error) {
+            console.error("Error sending data:", error);
+        }
+    }
+
+
     return (<>
-        {postId == null && post_titles.map((title, index) => {
-            return (<div className={styles.blogPostThumb} onClick={() => { setPostId(index); }}>
+        {postId == null && Object.entries(blogData).map((postData) => {
+            const id = postData[0];
+            const post = postData[1];
+            return (<div className={styles.blogPostThumb} key={id} onClick={() => { openPost(id); }}>
                 <div style={{ float: "left" }}>
-                    <div className={styles.blogPostTitle}>{title}</div>
-                    <div className={styles.blogPostViews}>123,333 views</div>
+                    <div className={styles.blogPostTitle}>{post.title}</div>
+                    <div className={styles.blogPostViews}>{post.views} views</div>
                 </div>
                 <div className={styles.blogPostTime}>~3min</div>
             </div>);
@@ -22,8 +39,8 @@ export default function BlogPage() {
 
     function BlogPost() {
         return (<>
-            <div className={styles.title}>{post_titles[postId]}</div>
-            <div className={styles.section}>{lorem_ipsum}</div>
+            <div className={styles.title}>{blogData[postId].title}</div>
+            <div className={styles.section}>{blogData[postId].content}</div>
         </>);
     }
 }
