@@ -65,7 +65,29 @@
   font-size: 30pt;
   width: 100%;
   padding: 0rem 3rem;
-  margin-bottom: 8rem;
+  margin: 2rem 0 4rem 0;
+}
+.blogPostThumb {
+  width: 100%;
+  padding: 1rem 3rem;
+  transition: 0.3s ease; /* Smooth transition for background color */
+}
+
+.blogPostThumb:hover {
+  background-color: var(--container-background);
+  cursor: pointer;
+}
+
+.blogPostTitle {
+  font-weight: 900;
+}
+.blogPostViews {
+  font-weight: 100;
+}
+
+.blogPostTime {
+  float: right;
+  text-align: right;
 }
 
 .section {
@@ -73,18 +95,18 @@
   position: relative; /* Add this line */
   width: 100%;
   text-align: left;
-  padding: 0 3rem;
-  min-height: 30rem;
+  padding: 3rem;
 }
 
 /* Pseudo-element for bottom border */
-.section::after {
+.section + .section::before {
   content: '';
   display: block;
   height: 2px; /* Height of the border */
   background-color: var(--container-background); /* Color of the border */
-  width: 90%; /* Adjust this to control the length of the border */
+  width: 30%; /* Adjust this to control the length of the border */
   position: absolute;
+  top: 0rem;
   left: 50%; /* Center the border */
   transform: translateX(-50%); /* Ensure it's centered */
   opacity: 50%;
