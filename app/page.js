@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 import { useState } from 'react';
 import BlogPage from '@/components/BlogPage';
 import HomePage from '@/components/HomePage';
-import ResumePage from '@/components/ResumePage';
+import WorkPage from '@/components/WorkPage';
 
 export default function Home() {
   const [page, setPage] = useState(0);
@@ -13,7 +13,7 @@ export default function Home() {
     switch (page) {
       case 0: return <HomePage />;
       case 1: return <BlogPage />;
-      case 2: return <ResumePage />;
+      case 2: return <WorkPage />;
     }
   }
 
