@@ -3,6 +3,7 @@
   --container-background: #917563;
   --text-color: black;
   --text-color-secondary: white;
+  --padding: 4rem;
 }
 
 @media (prefers-color-scheme: dark) {
