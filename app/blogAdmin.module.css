@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  margin-bottom: 30rem;
+}
+
+.container {
+  background-color: var(--container-foreground);
+  width: 50%;
+  color: var(--text-color);
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 1rem var(--container-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5rem;
+}
+.titleInput,
+.contentInput {
+  background-color: white;
+  color: black;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.titleInput {
+  font-size: 50pt;
+}
+.contentInput {
+  font-size: 20pt;
+  height: 50vh;
+}
+
+.postButton {
+  background-color: var(--container-background);
+  color: var(--button-foreground);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem;
+  font-size: 20pt;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}

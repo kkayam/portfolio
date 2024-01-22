@@ -10,3 +10,6 @@ export async function get_posts() {
     var blog_data = await kv.get("blog_data");
     return blog_data;
 };
+export async function set_posts(blog_data) {
+    await kv.set("blog_data", blog_data);
+};
