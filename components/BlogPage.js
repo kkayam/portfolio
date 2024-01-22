@@ -1,18 +1,10 @@
 
 import styles from '@/app/page.module.css';
 import { useState, useEffect } from 'react';
-import { increment_post, get_posts } from './BlogKV';
+import { increment_post } from './BlogKV';
 
-export default function BlogPage() {
+export default function BlogPage({ blogData }) {
     const [postId, setPostId] = useState(null);
-    const [blogData, setBlogData] = useState({});
-
-    useEffect(() => {
-        async function getBlogData() {
-            setBlogData(await get_posts());
-        }
-        getBlogData();
-    }, []);
 
     async function openPost(_postId) {
         try {
@@ -23,6 +15,11 @@ export default function BlogPage() {
         }
     }
 
+    function calculateReadingTime(text) {
+        const wordsPerMinute = 200;
+        const numberOfWords = text.split(/\s/g).length;
+        return Math.ceil(numberOfWords / wordsPerMinute);
+    }
 
     return (<>
         {postId == null && Object.entries(blogData).map((postData) => {
@@ -33,7 +30,7 @@ export default function BlogPage() {
                     <div className={styles.blogPostTitle}>{post.title}</div>
                     <div className={styles.blogPostViews}>{post.views} views</div>
                 </div>
-                <div className={styles.blogPostTime}>~3min</div>
+                <div className={styles.blogPostTime}>~{calculateReadingTime(post.content)} min</div>
             </div>);
         })}
         {postId != null && <BlogPost />}
