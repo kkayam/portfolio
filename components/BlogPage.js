@@ -1,11 +1,18 @@
 
 import styles from '@/app/page.module.css';
-import { useState } from 'react';
-import blogData from "@/data/blog.json";
-import increment_post from './IncrementPost';
+import { useState, useEffect } from 'react';
+import { increment_post, get_posts } from './BlogKV';
 
 export default function BlogPage() {
     const [postId, setPostId] = useState(null);
+    const [blogData, setBlogData] = useState({});
+
+    useEffect(() => {
+        async function getBlogData() {
+            setBlogData(await get_posts());
+        }
+        getBlogData();
+    }, []);
 
     async function openPost(_postId) {
         try {
