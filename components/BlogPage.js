@@ -1,9 +1,11 @@
 
 import styles from '@/app/page.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { increment_post } from './BlogKV';
+import { AdminContext } from '@/app/page';
 
 export default function BlogPage({ blogData }) {
+    const admin = useContext(AdminContext);
     const [postId, setPostId] = useState(null);
 
     async function openPost(_postId) {
