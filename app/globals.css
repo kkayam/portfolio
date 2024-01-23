@@ -1,6 +1,7 @@
 :root {
   --container-foreground: #e2c6a6;
   --container-background: #917563;
+  --container-background-hover: #4c3d34;
   --text-color: black;
   --text-color-secondary: white;
   --padding: 4rem;

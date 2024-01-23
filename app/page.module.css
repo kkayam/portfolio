@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   min-height: 100vh;
 }
 
@@ -117,6 +118,26 @@
   transform: translateX(-50%); /* Ensure it's centered */
   opacity: 50%;
 }
+.addButton {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--container-background);
+  color: var(--text-color-secondary);
+  font-size: 30pt;
+  text-align: center;
+  line-height: 5rem;
+  cursor: pointer;
+  transition: 0.3s ease; /* Smooth transition for background color */
+}
+
+.addButton:hover {
+  background-color: var(--container-background-hover);
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {
