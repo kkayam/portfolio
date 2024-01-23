@@ -22,12 +22,18 @@
 }
 .titleInput,
 .contentInput {
-  background-color: white;
+  background-color: transparent;
+  border: none;
   color: black;
   width: 100%;
   margin-bottom: 2rem;
   border-radius: 10px;
   padding: 2rem;
+}
+
+.titleInput:focus,
+.contentInput:focus {
+  outline: none;
 }
 
 .titleInput {
