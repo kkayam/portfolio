@@ -17,6 +17,7 @@ export default function BlogEditPost({ blogData, selectedPost, setPostId }) {
         if (!id || id === -Infinity) id = 0;
         let _blogData = { ...blogData, [id]: _newPost };
         set_posts(_blogData);
+        window.location.reload(); // Refresh the page
     };
 
     const deletePost = () => {
@@ -24,6 +25,7 @@ export default function BlogEditPost({ blogData, selectedPost, setPostId }) {
         delete _blogData[selectedPost];
         set_posts(_blogData);
         setPostId(null);
+        window.location.reload(); // Refresh the page
     };
 
     return (
