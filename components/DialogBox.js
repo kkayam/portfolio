@@ -6,7 +6,7 @@ export default function DialogBox({ isOpen, onClose, title, children, size = '1x
   const sizeClasses = {
     '1x1': 'aspect-square max-w-[80vh]',
     '2x1': 'aspect-[2/1] max-w-[120vh]',
-    '1x2': 'aspect-[1/2] w-[45vh] max-h-[90vh]',
+    '1x2': 'aspect-[1/2] max-h-[90vh]',
     '2x2': 'aspect-square max-w-[90vh]',
   };
 
