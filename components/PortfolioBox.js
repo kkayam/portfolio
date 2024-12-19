@@ -24,7 +24,7 @@ export default function PortfolioBox({
     `}>
       <div className="h-full p-8">
         {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-        <div className="h-[calc(100%-2rem-32px)] overflow-auto">
+              <div className="h-[calc(100%-1rem-32px)] overflow-auto">
           <div className="text-base space-y-4">
             {children}
           </div>
