@@ -1,4 +1,5 @@
 import PortfolioBox from '@/components/PortfolioBox';
+import FillerBox from '@/components/FillerBox';
 
 export default function Home() {
   return (
@@ -27,9 +28,13 @@ export default function Home() {
             nisi. Voluptates nostrum tempore quia harum. Minima odit quae. Dolor voluptatem ab. Quas suscipit praesentium qui quaerat modi similique.
           </PortfolioBox>
 
+          <FillerBox />
+
           <PortfolioBox title="Skills">
             Your skills here
           </PortfolioBox>
+
+          <FillerBox />
 
           <PortfolioBox title="Featured Project" size="2x1">
             Your featured project description
@@ -42,9 +47,8 @@ export default function Home() {
           <PortfolioBox title="Contact">
             Your contact info
           </PortfolioBox>
-          <PortfolioBox title="Contact">
-            Your contact info
-          </PortfolioBox>
+
+          <FillerBox />
         </div>
       </div>
     </main>
