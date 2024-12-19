@@ -1,8 +1,8 @@
 const sizeClasses = {
   '1x1': 'aspect-square',
-  '2x1': 'md:col-span-2 aspect-[2/1]',
-  '1x2': 'aspect-[1/2] md:row-span-2',
-  '2x2': 'md:col-span-2 md:row-span-2 aspect-square',
+  '2x1': 'aspect-[2/1] md:col-span-2',
+  '1x2': 'aspect-[1/2] row-span-2 md:row-span-2',
+  '2x2': 'aspect-square md:col-span-2 md:row-span-2',
 };
 
 export default function PortfolioBox({ 
