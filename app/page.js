@@ -3,7 +3,7 @@ import FillerBox from '@/components/FillerBox';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#2C1810] p-4 md:p-8">
+    <main className="min-h-screen bg-[#2C1810] p-4 pb-20 md:p-8 md:pb-32">
       <div className="mx-auto max-w-[800px] w-full">
         <h1 className="
           text-4xl 
@@ -11,7 +11,8 @@ export default function Home() {
           font-bold 
           text-[#C17F59] 
           text-center 
-          mb-8
+          my-12
+          md:my-16
           hover:text-white
           transition-colors
           duration-300
