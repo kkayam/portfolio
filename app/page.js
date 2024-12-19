@@ -18,7 +18,7 @@ export default function Home() {
         ">
           <span className="text-white">Portfolio</span> Gallery
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
           <PortfolioBox title="About Me">
             Your introduction hereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
             nisi. Voluptates nostrumhereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
@@ -39,6 +39,9 @@ export default function Home() {
             Your experience details
           </PortfolioBox>
 
+          <PortfolioBox title="Contact">
+            Your contact info
+          </PortfolioBox>
           <PortfolioBox title="Contact">
             Your contact info
           </PortfolioBox>
