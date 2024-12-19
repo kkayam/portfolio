@@ -21,13 +21,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <PortfolioBox title="About Me">
             Your introduction hereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
-
-            Molestiae quo voluptas eius voluptatem. Eum laborum qui atque beatae dolores facilis fugiat. Alias assumenda soluta. Iure earum libero. Doloribus beatae odit consequatur et perspiciatis magnam sed repellendus aut.
-
-            Ex veniam eum recusandae aut enim nisi. Voluptates nostrum tempore quia harum. Minima odit quae. Dolor voluptatem ab. Quas suscipit praesentium qui quaerat modi similique.
-            Molestiae quo voluptas eius voluptatem. Eum laborum qui atque beatae dolores facilis fugiat. Alias assumenda soluta. Iure earum libero. Doloribus beatae odit consequatur et perspiciatis magnam sed repellendus aut.
-
-            Ex veniam eum recusandae aut enim nisi. Voluptates nostrum tempore quia harum. Minima odit quae. Dolor voluptatem ab. Quas suscipit praesentium qui quaerat modi similique.
+            nisi. Voluptates nostrumhereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
+            nisi. Voluptates nostrumhereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
+            nisi. Voluptates nostrumhereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
+            nisi. Voluptates nostrum tempore quia harum. Minima odit quae. Dolor voluptatem ab. Quas suscipit praesentium qui quaerat modi similique.
           </PortfolioBox>
 
           <PortfolioBox title="Skills">

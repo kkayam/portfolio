@@ -37,7 +37,7 @@ export default function PortfolioBox({
           [&::-webkit-scrollbar]:w-1.5
           [&::-webkit-scrollbar-thumb]:rounded-full
         ">
-                  <div className="text-base space-y-4 pr-3">
+                  <div className="text-base space-y-4">
             {children}
           </div>
         </div>
