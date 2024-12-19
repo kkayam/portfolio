@@ -9,7 +9,8 @@ export default function PortfolioBox({
   title, 
   children, 
   size = '1x1',
-  className = ''
+  className = '',
+  noPadding = false
 }) {
   return (
     <div className={`
@@ -24,25 +25,29 @@ export default function PortfolioBox({
       ${sizeClasses[size]}
       ${className}
     `}>
-      <div className="h-full p-8">
-        {title && <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>}
-              <div className="
-          h-[calc(100%-1rem-32px)] 
-          overflow-auto 
-          scrollbar-thin 
-          scrollbar-track-transparent 
-          scrollbar-thumb-[#ffffff80]
-          hover:scrollbar-thumb-[#ffffff80]
-          transition-colors
-          duration-200
-          [&::-webkit-scrollbar]:w-1.5
-          [&::-webkit-scrollbar-thumb]:rounded-full
-        ">
-                  <div className="text-base space-y-4">
-            {children}
+      {!noPadding ? (
+        <div className="h-full p-8">
+          {title && <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>}
+          <div className="
+            h-[calc(100%-1rem-32px)] 
+            overflow-auto 
+            scrollbar-thin 
+            scrollbar-track-transparent 
+            scrollbar-thumb-[#ffffff80]
+            hover:scrollbar-thumb-[#ffffff80]
+            transition-colors
+            duration-200
+            [&::-webkit-scrollbar]:w-1.5
+            [&::-webkit-scrollbar-thumb]:rounded-full
+          ">
+            <div className="text-base space-y-4">
+              {children}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        children
+      )}
     </div>
   );
 } 

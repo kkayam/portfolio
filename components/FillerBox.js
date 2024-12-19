@@ -23,7 +23,7 @@ export default function FillerBox() {
   const randomImage = images[Math.floor(Math.random() * images.length)];
   
   return (
-    <div className="bg-[#C17F59] rounded-2xl shadow-lg hover:shadow-xl transition-shadow w-full aspect-square overflow-hidden">
+    <PortfolioBox noPadding className="overflow-hidden">
       <div className="relative w-full h-full">
         <img
           src={randomImage.url}
@@ -33,6 +33,6 @@ export default function FillerBox() {
         />
         <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-colors duration-300" />
       </div>
-    </div>
+    </PortfolioBox>
   );
 } 
