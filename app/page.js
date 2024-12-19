@@ -4,6 +4,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#2C1810] p-4 md:p-8">
       <div className="mx-auto max-w-[800px] w-full">
+        <h1 className="
+          text-4xl 
+          md:text-5xl 
+          font-bold 
+          text-[#C17F59] 
+          text-center 
+          mb-8
+          hover:text-white
+          transition-colors
+          duration-300
+          tracking-wide
+        ">
+          <span className="text-white">Portfolio</span> Gallery
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <PortfolioBox title="About Me">
             Your introduction hereFuga vitae exercitationem numquam. Possimus eligendi culpa aliquam est sint molestiae. Eius voluptatum est velit omnis aut praesentium.
