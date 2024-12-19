@@ -25,8 +25,19 @@ export default function PortfolioBox({
     `}>
       <div className="h-full p-8">
         {title && <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>}
-        <div className="h-[calc(100%-1rem-32px)] overflow-auto scrollbar-thin scrollbar-track-[#00000020] scrollbar-thumb-[#ffffff40] hover:scrollbar-thumb-[#ffffff60]">
-          <div className="text-base space-y-4 pr-2">
+              <div className="
+          h-[calc(100%-1rem-32px)] 
+          overflow-auto 
+          scrollbar-thin 
+          scrollbar-track-transparent 
+          scrollbar-thumb-[#ffffff80]
+          hover:scrollbar-thumb-[#ffffff80]
+          transition-colors
+          duration-200
+          [&::-webkit-scrollbar]:w-1.5
+          [&::-webkit-scrollbar-thumb]:rounded-full
+        ">
+                  <div className="text-base space-y-4 pr-3">
             {children}
           </div>
         </div>
