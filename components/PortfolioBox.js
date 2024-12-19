@@ -13,7 +13,8 @@ export default function PortfolioBox({
 }) {
   return (
     <div className={`
-      bg-white 
+      bg-[#C17F59] 
+      text-white
       rounded-2xl 
       shadow-lg 
       hover:shadow-xl 
@@ -23,8 +24,8 @@ export default function PortfolioBox({
       ${className}
     `}>
       <div className="h-full p-8">
-        {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-              <div className="h-[calc(100%-1rem-32px)] overflow-auto">
+        {title && <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>}
+        <div className="h-[calc(100%-1rem-32px)] overflow-auto">
           <div className="text-base space-y-4">
             {children}
           </div>

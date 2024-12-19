@@ -2,7 +2,7 @@ import PortfolioBox from '@/components/PortfolioBox';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100 p-4 md:p-8">
+    <main className="min-h-screen bg-[#2C1810] p-4 md:p-8">
       <div className="mx-auto max-w-[800px] w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <PortfolioBox title="About Me">
