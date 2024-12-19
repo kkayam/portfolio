@@ -29,12 +29,12 @@ export default function Home() {
           </PortfolioBox>
 
           <FillerBox />
+          <FillerBox />
 
           <PortfolioBox title="Skills">
             Your skills here
           </PortfolioBox>
 
-          <FillerBox />
 
           <PortfolioBox title="Featured Project" size="2x1">
             Your featured project description
